@@ -23,13 +23,6 @@ pipeline {
         }
     }
        
-       stage('SonarQube'){
-        steps{
-                bat label: '', script: '''mvn sonar:sonar \
-                -Dsonar.host.url=http://localhost:9000 \
-                -Dsonar.login=0d60f0bb4ad1cd2a79effc2623ed0e4a77fd4e90'''
-            }
-           }
     
     stage('Maven Package'){
         steps{
